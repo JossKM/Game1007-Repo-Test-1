@@ -1,3 +1,10 @@
+#This file tells the git software which folders and files it should NOT look for changes in (i.e. things you do NOT want in the repository but still want on your local machine)
+#This is a comment
+#Ignore everything which is of the form */*/Debug/* where * can be any folder name
+**/Debug/*
+#Ignore everything in the .vs folder next to this gitignore file because all these files are auto-generated
+/.vs/*
+
 # Prerequisites
 *.d
 
@@ -14,7 +21,6 @@
 # Compiled Dynamic libraries
 *.so
 *.dylib
-*.dll
 
 # Fortran module files
 *.mod
@@ -24,7 +30,6 @@
 *.lai
 *.la
 *.a
-*.lib
 
 # Executables
 *.exe
