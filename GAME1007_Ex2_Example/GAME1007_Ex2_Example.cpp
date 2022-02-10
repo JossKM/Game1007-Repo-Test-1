@@ -7,7 +7,7 @@ int main()
 {
 	///Welcoming the players, getting their inputs for their names
 	string Player1, Player2;
-	int correctNumber, playerGuess = 0, attempts = 0, playersTurn, guessLimit = 6;
+	int correctNumber, playerGuess = 0, attempts = 0, playersTurn, guessLimit = 3;
 	bool outOfAttempts = false;
 
 	cout << "===================================\n";
@@ -27,7 +27,7 @@ int main()
 	correctNumber = rand() % 100 + 1;
 
 
-	cout << "A number from 1 - 100 will be generated, guess it right to win the game!(Attempts: 6) \n\n";
+	cout << "A number from 1 - 100 will be generated, guess it right to win the game!" << " Attempts: " << attempts << "/" << guessLimit << endl;
 
 
 	//Generate number from 1-2 for who's turn it is
@@ -50,14 +50,14 @@ int main()
 		playersTurn = (1 - (playersTurn - 1)) + 1;
 
 		//Requests a number from user
-		cout << ", enter a number: " << endl;
+		cout << ", enter a number. " << " Attempts: " << attempts << "/" << guessLimit << endl;
 		cin >> playerGuess;
 		cout << "\n";
 		//Starts counting after a number is entered
 		attempts++;
 
 
-		//If the limit (6) is less than or equal to attemps, the program stops
+		//If the limit is less than or equal to attemps, the program stops
 		if (guessLimit <= attempts)
 		{
 			cout << "You lost! All 6 attempts were used :( \n";
